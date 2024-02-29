@@ -1,0 +1,9 @@
+@for (post of posts(); track $index) {
+    @defer(on viewport) {
+        <infinite-scroll-post id="postId{{$index+1}}" [currentId]="$index"></infinite-scroll-post>
+    }
+
+    @placeholder {
+        <div style="visibility: hidden;"></div>
+    }
+}
